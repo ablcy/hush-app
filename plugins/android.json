@@ -1,0 +1,51 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-firebase-messaging": {
+      "ANDROID_FIREBASE_BOM_VERSION": "32.5.0",
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-code-push": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    }
+  },
+  "dependent_plugins": {
+    "code-push": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-advanced-http": {
+      "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1",
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-plugin-zip": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    },
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.lcy.hush"
+    }
+  }
+}

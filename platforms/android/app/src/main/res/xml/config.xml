@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.lcy.hush" version="5.9.23" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CordovaHttpPlugin">
+        <param name="android-package" value="com.silkimen.cordovahttp.CordovaHttpPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="FirebaseMessaging">
+        <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseMessagingPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="BackgroundMode">
+        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode" />
+    </feature>
+    <feature name="BackgroundModeExt">
+        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundModeExt" />
+    </feature>
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Zip">
+        <param name="android-package" value="org.apache.cordova.Zip" />
+    </feature>
+    <feature name="CodePush">
+        <param name="android-package" value="com.microsoft.cordova.CodePush" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Hush</name>
+    <description>即时聊天软件 - 支持视频通话、阅后即焚</description>
+    <author email="lcy@example.com" href="https://github.com/ablcy">Li Chengyan</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+    </config-file>
+    <config-file parent="/manifest" target="AndroidManifest.xml">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WAKE_LOCK" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+        <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    </config-file>
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="GradlePluginGoogleServicesEnabled" value="true" />
+    <preference name="GradlePluginGoogleServicesVersion" value="4.4.0" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="android-minSdkVersion" value="24" />
+    <preference name="android-targetSdkVersion" value="34" />
+</widget>

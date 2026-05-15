@@ -1,0 +1,38 @@
+{
+  "name": "Hush",
+  "version": "5.9.25",
+  "description": "Hush - 即时聊天软件",
+  "main": "index.js",
+  "scripts": {
+    "build": "cordova build android",
+    "run": "cordova run android",
+    "release": "cordova build android --release",
+    "prepare": "cordova prepare",
+    "code-push-release": "code-push release hush-android ./www -d Production"
+  },
+  "keywords": [
+    "cordova",
+    "chat",
+    "messaging",
+    "video-call"
+  ],
+  "author": "Li Chengyan",
+  "license": "MIT",
+  "devDependencies": {
+    "cordova": "^12.0.0",
+    "cordova-android": "^11.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-firebase-messaging": {},
+      "cordova-plugin-background-mode": {},
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-code-push": {}
+    }
+  }
+}
